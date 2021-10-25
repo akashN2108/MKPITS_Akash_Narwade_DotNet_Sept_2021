@@ -20,7 +20,7 @@ int main()
     {
      for(j=0;j<=2;j++)
      {
-	  if((i==j)||(i+j==2))
+	  if(i==j)
 	  {
 	  printf("%3d",A[i][j]=0);
 	  }
