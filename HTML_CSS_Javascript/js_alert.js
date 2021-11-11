@@ -1,1 +1,0 @@
-alert("Welcome to Sky networks");
