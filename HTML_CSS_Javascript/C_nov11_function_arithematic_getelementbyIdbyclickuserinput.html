@@ -1,0 +1,44 @@
+<html>
+<head>
+</head>
+<body>
+
+    <form>
+         <table><caption> Arithematic Operation</caption>
+          <tr>
+             <td><input type="button" value="Add" onclick="Add(a,b)"></td>
+              <td><input type="button" value="Sub" onclick="Sub(a,b)"></td>
+              <td><input type="button" value="Div" onclick="Div(a,b)"></td>
+              <td><input type="button" value="Mul" onclick="Mul(a,b)"></td>
+          </tr>
+        </table>
+        </form>
+        </body>
+<script>
+
+    a=parseInt(prompt("Enter first number","1"));
+    b=parseInt(prompt("Enter Second number","1"));
+  
+function Add(a,b)
+{
+    alert("Addition =" + (a+b));
+}
+
+function Sub(a,b)
+{
+    alert("Substraction =" + (a-b));
+}
+function Div(a,b)
+{
+    alert("Division =" + (a/b));
+}
+
+
+function Mul(a,b)
+{
+    alert("Multipilication =" + (a*b));
+}
+
+</script>
+</body>
+</html>
