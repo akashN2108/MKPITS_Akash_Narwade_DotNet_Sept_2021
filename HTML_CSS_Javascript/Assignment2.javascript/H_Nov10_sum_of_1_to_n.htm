@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>function using sum of 1 to n number</h2>
+<script>
+var i,sum=0;
+var c;
+n=parseFloat(prompt("The number you want to print from 1 to:","0"));
+document.write("the number from 1 to" + n + " sum is " +Getsum(n));
+
+function Getsum(n)
+{
+for(i=1;i<=n;i++)
+{
+sum+=i;
+}
+return sum;
+}
+</script>
+</body>
+</html>
