@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+    <caption>Voting eligibility check</caption>
+          <tr>
+             <td><input type="button" value="submit" onclick="VoterValidity(name,age)"></td>
+          </tr>
+     
+<script>
+
+   name=prompt("Enter the name","Akash");
+   age=parseInt(prompt("Enter Age of Candidate","0"));
+  
+function VoterValidity(name,age)
+{
+  if(age<18)
+  document.write("Not eligible for vote");
+  else
+  document.write("Eligible for vote");
+}
+  alert(name + " " + age);
+</script>
+ </body>
+</html>
