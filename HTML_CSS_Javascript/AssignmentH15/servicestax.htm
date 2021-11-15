@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <caption><h1>Service Tax</h1></caption>
+        <form>
+            <table border="1">
+                <tr>
+                <td colspan="2">Enter Amount</td>
+                <td colspan="2"><input type="text" id="a"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Enter Services taxes in percentage</td>
+                    <td colspan="2"><input type="text" id="b"></td>
+                </tr>
+                <tr>
+                        <td colspan="2">Total Amount</td>
+                        <td colspan="2"><output id="c"></output></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Service tax</td>
+                    <td colspan="2"><output id="d"></output></td>
+                </tr>  
+                    <tr>
+                       <td colspan="4" align="center"><input type="button" value="calculate" onclick="amout_tax()"></td>
+                    </tr>     
+ </table>
+</form>
+<script>
+    function amout_tax()
+    {
+        a=parseInt(document.getElementById("a").value);
+        s=parseInt(document.getElementById("b").value);
+ta = a - a * (s/100);
+        document.getElementById("c").innerHTML= +ta;
+st = a * (s/100);
+        document.getElementById("d").innerHTML= +st;
+
+    }
+</script>
+</body>
+</html>
+
+

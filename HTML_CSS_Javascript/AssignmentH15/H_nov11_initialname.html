@@ -1,0 +1,26 @@
+<html>
+<head>
+<h1> we are using substring for the function </h1> 
+</head>
+<body>
+<h3 id="demo"></h3>
+<script>
+ fname = prompt("Enter the first name:","Akash");
+ mname = prompt("Enter the middle name:","Devavand");
+ lname = prompt("Enter the last name:","Narwade");
+ 
+x=personalInfo(fname,mname,lname);
+document.getElementById("demo").innerHTML="Your initial name is:"+"<br>"+personalInfo(fname,mname,lname);
+
+function personalInfo(fname,mname,lname)
+{
+var f = fname.substring(0,1);
+var m = mname.substring(0,1);
+
+y=f + "." + m + "." + lname;
+return y;
+}
+
+</script>
+</body>
+</html>
