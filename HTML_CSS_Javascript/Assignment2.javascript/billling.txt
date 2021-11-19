@@ -1,0 +1,33 @@
+<html>
+<head>
+   <h1> Billing App</h1>
+</head>
+<body>
+    <form>
+    <table border="1">
+    <tr>
+        <td colspan="2">Enter price per item</td>
+        <td colspan="2"><input type="text" id="1"></td>
+    </tr>
+    <tr>
+        <td colspan="2">Enter quantity</td>
+        <td colspan="2"><input type="text" id="2"></td>
+    </tr>
+    <tr>
+    <td colspan="2">Amount</td>
+    <td colspan="2"><input type="text" id="3"></td>
+    </tr>
+    <tr>
+    <td colspan="6" align="center"> <input type="button" value="sumbit"></td>
+   </tr>
+   <tr>
+    <td>YOUR TOTAL BILL</td>
+    <td colspan="2"><input type="text" id="4"></td>
+</tr>
+   </table>
+   </form>
+   <script>
+       
+   </script>
+</body>
+</html>
