@@ -7,9 +7,10 @@ using System.Web.UI.WebControls;
 
 namespace ClientSide_StateManagement
 {
-    public partial class WebForm4 : System.Web.UI.Page
+    public partial class CreatedViewCard : System.Web.UI.Page
     {
         HttpCookie mycookee;
+        
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -31,9 +32,13 @@ namespace ClientSide_StateManagement
 
             }
             this.Response.Cookies.Add(mycookee);
-            mycookee.Expires.AddDays(29); //user ka broswer hai usme 29 day tak rhega
-            Response.Redirect("Readcookee.aspx");       //filename has to be return here eg by file is (ReadCokee.aspx)
+            Response.Redirect("ReadViewCard.aspx");
+            //code 2
+            Label2.Text = CheckBoxList1.SelectedItem.ToString();   //item name 
+            //code2
+            Label3.Text = CheckBoxList1.SelectedIndex.ToString();  //item no
+     
+        }
 
         }
     }
-}
