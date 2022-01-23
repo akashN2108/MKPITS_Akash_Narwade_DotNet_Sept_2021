@@ -1,0 +1,41 @@
+﻿@model MVC_LOgininAppDemo.Models.UserProfile
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{@Html.AntiForgeryToken()
+
+<form>
+    <table>
+
+        <tr>
+            <td>Username</td>
+            <td>@Html.TextBox("Username")</td>
+        </tr>
+        <tr>
+            <td>Userpassword</td>
+            <td>@Html.TextBox("Userpassword")</td>
+        </tr>
+
+        <tr><td colspan="2"> <input type="submit" value="Submit" /></td></tr>
+        <tr>
+            <td class="text-danger">
+            </td>
+        </tr>
+
+    </table>
+</form>
+}
+<div>
+
+@if (ViewBag.Message != null)
+{
+    @ViewBag.Message;
+}
+
+
+@Html.ActionLink("ForgotPassword", "ForgotPassword", "Home");
+
+</div>

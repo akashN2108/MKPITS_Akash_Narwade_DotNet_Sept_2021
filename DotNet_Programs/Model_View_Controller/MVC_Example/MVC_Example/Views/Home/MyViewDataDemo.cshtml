@@ -1,0 +1,15 @@
+﻿
+
+@{
+    ViewBag.Title = "MyViewDataDemo";
+}
+
+<h2>MyViewDataDemo</h2>
+<h2>Mobile Brands </h2>
+<ul>
+    @foreach(string s in ViewData["brands"]as List<string>)
+        {
+    <li>@s</li>
+    }
+</ul>
+

@@ -1,0 +1,151 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Project_Desing_Website.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+ 
+ <title>Sky Motor Groups</title>
+ 
+    <style type="text/css">
+        .auto-style1 {
+            width: 1555px;
+            height: 456px;
+            border-color: #000000;
+            background-color: #CCCCCC;
+        }
+        .auto-style3 {
+            width: 628px;
+            height: 303px;
+        }
+        .auto-style4 {
+            height: 104px;
+        }
+        .auto-style7 {
+            height: 303px;
+            width: 164px;
+        }
+        .auto-style8 {
+            height: 303px;
+            width: 301px;
+        }
+        .auto-style9 {
+            margin-top: 0px;
+        }
+        .auto-style10 {
+            height: 86px;
+            width: 1554px;
+        }
+        .auto-style11 {
+            height: 96px;
+            width: 1554px;
+        }
+        .auto-style12 {
+            height: 96px;
+            width: 1555px;
+            margin-top: 0px;
+        }
+        .auto-style13 {
+            height: 45px;
+        }
+    </style>
+ 
+ 
+</head>
+<body>
+    <form id="form1" runat="server">
+       <header id="header" class="auto-style11">
+          
+           
+          
+<marquee behavior="alternate" bgcolor="black" direction="left" scrollamount="16" scrolldelay="10" class="auto-style12">
+    <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="35px" ForeColor="White" Text="SKY MOTOR GROUPS"></asp:Label></marquee>
+       </header>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style13" colspan="3" align="center">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:DropDownList ID="DropDownList4" runat="server">
+                        <asp:ListItem>NEW CAR</asp:ListItem>
+                        <asp:ListItem>Search New Car</asp:ListItem>
+                        <asp:ListItem>Popular Brands</asp:ListItem>
+                        <asp:ListItem>Upcoming Brands</asp:ListItem>
+                        <asp:ListItem>Electric Cars</asp:ListItem>
+                        <asp:ListItem>Suggest Me a Car</asp:ListItem>
+                        <asp:ListItem>Service Center</asp:ListItem>
+                        <asp:ListItem>Offers &amp; Discount </asp:ListItem>
+                    </asp:DropDownList>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:DropDownList ID="DropDownList3" runat="server">
+                        <asp:ListItem>USED CAR</asp:ListItem>
+                        <asp:ListItem>Car in Your City</asp:ListItem>
+                        <asp:ListItem>SN Used Cars </asp:ListItem>
+                        <asp:ListItem>Used Car Dealers</asp:ListItem>
+                        <asp:ListItem>Used Car Loans</asp:ListItem>
+                        <asp:ListItem>My Listing</asp:ListItem>
+                    </asp:DropDownList>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:DropDownList ID="DropDownList2" runat="server">
+                        <asp:ListItem>COMPARE CAR</asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                    </asp:DropDownList>
+&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:DropDownList ID="DropDownList1" runat="server">
+                        <asp:ListItem>NEWS &amp; REVIEWS</asp:ListItem>
+                        <asp:ListItem>Car News</asp:ListItem>
+                        <asp:ListItem>Feature Stories</asp:ListItem>
+                        <asp:ListItem>Car collection</asp:ListItem>
+                        <asp:ListItem>Call Selling Tips </asp:ListItem>
+                        <asp:ListItem>User Reviews</asp:ListItem>
+                        <asp:ListItem>Video Reviews</asp:ListItem>
+                        <asp:ListItem>Road Test</asp:ListItem>
+                    </asp:DropDownList>
+                    &nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style4" colspan="3" align="center">
+                    <asp:Image ID="Image3" runat="server" Height="207px" ImageUrl="~/Images/car2.jpg" Width="352px" />
+                    <asp:Image ID="Image1" runat="server" Height="162px" ImageUrl="~/Images/Footer.jpeg" Width="772px" CssClass="auto-style9" />
+                    <asp:Image ID="Image2" runat="server" Height="206px" ImageUrl="~/Images/carimages.jpg" Width="385px" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style7">
+                    <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1">
+                    </asp:TreeView>
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                </td>
+                <td class="auto-style3">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td class="auto-style8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+&nbsp;
+                    <br />
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Enquire Form.aspx">PreBooking Form</asp:HyperLink>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:myhomeConnectionString2 %>" SelectCommand="SELECT * FROM [Car_product]"></asp:SqlDataSource>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+            </tr>
+        </table>
+       <footer class="auto-style10">
+
+       </footer>
+    </form>
+</body>
+</html>

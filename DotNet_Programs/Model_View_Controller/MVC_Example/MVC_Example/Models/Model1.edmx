@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MydbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Indiancars">
+          <Key>
+            <PropertyRef Name="carId" />
+          </Key>
+          <Property Name="carId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="carname" Type="varchar" MaxLength="30" />
+          <Property Name="brand" Type="varchar" MaxLength="30" />
+          <Property Name="model" Type="varchar" MaxLength="10" />
+          <Property Name="price" Type="decimal" Precision="12" Scale="0" />
+          <Property Name="Modelyear" Type="int" />
+        </EntityType>
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="productname" Type="varchar" MaxLength="20" />
+          <Property Name="price" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="MFD" Type="date" />
+          <Property Name="catId" Type="int" />
+        </EntityType>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="Roll_no" />
+          </Key>
+          <Property Name="Roll_no" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="firstname" Type="varchar" MaxLength="20" />
+          <Property Name="lastname" Type="varchar" MaxLength="20" />
+          <Property Name="Eng" Type="int" />
+          <Property Name="Maths" Type="int" />
+          <Property Name="sci" Type="int" />
+        </EntityType>
+        <EntityType Name="worker">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WorkerId" Type="varchar" MaxLength="7" />
+          <Property Name="Worker_name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Wages" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="permanent" Type="bit" />
+          <Property Name="DOJ" Type="date" />
+        </EntityType>
+        <EntityContainer Name="MydbModelStoreContainer">
+          <EntitySet Name="Indiancars" EntityType="Self.Indiancars" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="product" EntityType="Self.product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="student" EntityType="Self.student" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="worker" EntityType="Self.worker" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MydbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Indiancar">
+          <Key>
+            <PropertyRef Name="carId" />
+          </Key>
+          <Property Name="carId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="carname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="brand" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="model" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="price" Type="Decimal" Precision="12" Scale="0" />
+          <Property Name="Modelyear" Type="Int32" />
+        </EntityType>
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="productname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="price" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="MFD" Type="DateTime" Precision="0" />
+          <Property Name="catId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="Roll_no" />
+          </Key>
+          <Property Name="Roll_no" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="firstname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="lastname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Eng" Type="Int32" />
+          <Property Name="Maths" Type="Int32" />
+          <Property Name="sci" Type="Int32" />
+        </EntityType>
+        <EntityType Name="worker">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WorkerId" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="Worker_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Wages" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="permanent" Type="Boolean" />
+          <Property Name="DOJ" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityContainer Name="MydbEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Indiancars" EntityType="Self.Indiancar" />
+          <EntitySet Name="products" EntityType="Self.product" />
+          <EntitySet Name="students" EntityType="Self.student" />
+          <EntitySet Name="workers" EntityType="Self.worker" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MydbModelStoreContainer" CdmEntityContainer="MydbEntities1">
+          <EntitySetMapping Name="Indiancars">
+            <EntityTypeMapping TypeName="MydbModel.Indiancar">
+              <MappingFragment StoreEntitySet="Indiancars">
+                <ScalarProperty Name="carId" ColumnName="carId" />
+                <ScalarProperty Name="carname" ColumnName="carname" />
+                <ScalarProperty Name="brand" ColumnName="brand" />
+                <ScalarProperty Name="model" ColumnName="model" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="Modelyear" ColumnName="Modelyear" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="products">
+            <EntityTypeMapping TypeName="MydbModel.product">
+              <MappingFragment StoreEntitySet="product">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="productname" ColumnName="productname" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="MFD" ColumnName="MFD" />
+                <ScalarProperty Name="catId" ColumnName="catId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="students">
+            <EntityTypeMapping TypeName="MydbModel.student">
+              <MappingFragment StoreEntitySet="student">
+                <ScalarProperty Name="Roll_no" ColumnName="Roll_no" />
+                <ScalarProperty Name="firstname" ColumnName="firstname" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="Eng" ColumnName="Eng" />
+                <ScalarProperty Name="Maths" ColumnName="Maths" />
+                <ScalarProperty Name="sci" ColumnName="sci" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="workers">
+            <EntityTypeMapping TypeName="MydbModel.worker">
+              <MappingFragment StoreEntitySet="worker">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="WorkerId" ColumnName="WorkerId" />
+                <ScalarProperty Name="Worker_name" ColumnName="Worker_name" />
+                <ScalarProperty Name="Wages" ColumnName="Wages" />
+                <ScalarProperty Name="permanent" ColumnName="permanent" />
+                <ScalarProperty Name="DOJ" ColumnName="DOJ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

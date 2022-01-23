@@ -1,0 +1,31 @@
+﻿@using Helper_Methods.Models 
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table>
+    <caption>Student Registration</caption>
+    <tr>
+        <td>First Name</td>
+        <td>@Html.TextBox("firstname")</td>
+    </tr>
+    <tr>
+        <td>Last Name</td>
+        <td>@Html.TextBox("lastname")</td>
+    </tr>
+    <tr><td>Gender:</td><td>@Html.RadioButton("r1","Male")Male @Html.RadioButton("r1","Female")Female</td></tr>
+    <tr><td>Address:</td><td>@Html.TextArea("Address")</td></tr>
+    <tr><td>Course :</td><td>@Html.CheckBox("ASp")ASP.Net @Html.CheckBox("MVC")ASP.net MVC @Html.CheckBox("C#")C Sharpe</td></tr>
+    <tr>
+        <td>City</td><td>@Html.DropDownList("City",
+                        new SelectList(Enum.GetValues(typeof(City))),
+                        "select City",
+                        new { @Class = "form-control" })
+        </td>
+    </tr>
+    <td colspan="2"><input type="Submit" value="Submit"></input ></td>
+
+
+</table>

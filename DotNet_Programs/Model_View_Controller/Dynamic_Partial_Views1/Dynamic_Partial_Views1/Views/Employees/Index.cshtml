@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Dynamic_Partial_Views1.Models.Employee>
+
+@{ ViewBag.Title = "Index";
+}
+
+<div class="row">
+
+    <div class="col-lg-6">
+        @Html.Action("_EmployeeLogin");
+    </div>
+    <div class="col-lg-6">
+        @{Html.RenderAction("_EmployeeRegistration");}
+    </div>
+
+</div>

@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = ("~/Views/Shared/_DarkLayoutPage.cshtml");
+}
+<h2>Mobile BrandNames</h2>
+<ul>
+    @foreach (string b in ViewBag.BrandNames)
+    {
+        <li>@b</li>
+    }
+</ul>
+<h2>Some Student In My Class</h2>
+<ol>
+    @foreach (var s in ViewBag.StudentNames)
+    {
+        <li> @s.firstname @s.lastname</li>
+    }
+</ol>
+
+
